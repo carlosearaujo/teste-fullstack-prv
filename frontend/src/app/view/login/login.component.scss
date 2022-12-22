@@ -1,0 +1,19 @@
+:host ::ng-deep .p-card{
+    background-color: #00995c;
+}
+
+form{
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+input, button{
+    width: 100%;
+}
+
+@media (min-width:480px){
+    :host{
+        background-color: #00995c;
+    }
+}

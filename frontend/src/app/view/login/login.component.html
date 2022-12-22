@@ -1,0 +1,17 @@
+<form class = "grid m-0" (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+    <p-card>
+        <ng-template pTemplate="header">
+            <img src="assets/logo.png" />
+        </ng-template>
+        <div>
+            <div class = "mb-3">
+                <input pInputText type="text" formControlName="login" class="form-control" name="login" placeholder="Login">
+            </div>
+            <div class = "mb-3">
+                <input pInputText type="text" formControlName="password" class="form-control" name="login" placeholder="Password">
+                <div *ngIf = "unauthorized" class="p-error my-3">Usuário ou senha inválido</div>
+            </div>
+            <button class="p-button-secondary p-button-raised" pButton type="submit" label="Entrar" [disabled]="!loginForm.valid"></button>
+        </div>
+    </p-card>
+</form>
